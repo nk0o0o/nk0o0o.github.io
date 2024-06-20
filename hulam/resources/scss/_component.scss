@@ -1,0 +1,494 @@
+body.no_scroll{
+  overflow: hidden;
+}
+/** Font **/
+/* FONT */
+//.h5 { font-size: 20px !important; font-weight: 500; line-height: 32px; } 1.6
+//.h6 { font-size: 18px !important; font-weight: 500; line-height: 26px; } 1.44
+//.body { font-size: 16px !important; font-weight: 400; line-height: 26px; } 1.625
+//.small { font-size: 14px !important; font-weight: 400; line-height: 24px; } 1.71
+
+//Font Size
+h1 {
+  font-size: $fs-xxlg;
+  font-weight: $fw-b;
+  line-height: 1.37;
+  @media screen and (max-width: $breakpoint-tablet){
+    font-size: $fs-lg;
+  }
+}
+h2 {
+  font-size: $fs-xlg;
+  font-weight: $fw-b;
+  line-height: 1.45;   
+  @media screen and (max-width: $breakpoint-tablet){
+    font-size: $fs-l;
+  }
+}
+h3 {
+   font-size: $fs-lg;
+   font-weight: $fw-l;
+   line-height: 1.5;
+}
+h4 {
+  font-size: $fs-l;
+  font-weight: $fw-m;
+  line-height:  1.454;
+}
+h5 {
+   font-size: $fs-ml;
+   font-weight: $fw-m;
+   line-height: 1.6;
+}
+h6 {
+   font-size: $fs-m;
+   font-weight: $fw-m;
+   line-height: 1.44;
+}
+caption {
+   font-size: $fs-xxs;
+   line-height: 2;
+}
+.txt {
+   &_body1 {
+      font-size: $fs-m;
+      font-weight: $fw-n;
+      line-height: 1.625;
+   }
+   &_body2 {
+      font-size: $fs-xlg;
+      font-weight: $fw-n;
+      line-height:1;
+      @media screen and (max-width: $breakpoint-tablet){
+        font-size: $fs-lg;
+      }
+   }
+   &_btn {
+      font-size: $fs-xs;
+      line-height:1.71;
+   }
+   &_caption {
+      font-size: $fs-xxs;
+      line-height: 2;
+   }
+}
+/** Font Family **/
+.font {
+  &_kr {
+    font-family: $font-noto !important;
+  }
+  &_en {
+    font-family: $font-popins !important;
+  }
+}
+/** Font weight **/
+.fw {
+   &_t {
+      font-weight: $fw-t;
+   }
+   &_l {
+      font-weight: $fw-l;
+   }
+   &_r {
+      font-weight: $fw-n;
+   }
+   &_m {
+      font-weight: $fw-m;
+   }
+   &_sb {
+      font-weight: $fw-sb;
+   }
+   &_b {
+      font-weight: $fw-b;
+   }
+   &_bb {
+      font-weight: $fw-bb;
+   }
+}
+
+/*** Color ***/
+
+//Background Color
+.bg {
+   &_primary {
+      background-color: $color-primary !important;
+   }
+   &_secondary {
+      background-color: transparentize($color-primary, 0.9) !important;
+   }
+   &_success,
+   &_green {
+      background-color: $color-green !important;
+   }
+   &_red,
+   &_danger {
+      background-color: $color-red !important;
+   }
+   &_warning,
+   &_yellow {
+      background-color: $color-yellow !important;
+   }
+   &_info {
+      background-color: $color-blue !important;
+   }
+   &_light {
+      background-color: $gray-50 !important;
+   }
+   &_orange {
+      background-color: $color-orange !important;
+   }
+   &_olive {
+      background-color: $color-olive !important;
+   }
+   &_teal {
+      background-color: $color-teal !important;
+   }
+   &_blue {
+      background-color: $color-blue !important;
+   }
+   &_violet {
+      background-color: $color-violet !important;
+   }
+   &_purple {
+      background-color: $color-purple !important;
+   }
+   &_pink {
+      background-color: $color-pink !important;
+   }
+   &_brown {
+      background-color: $color-brown !important;
+   }
+   &_gray {
+      background-color: $gray-10 !important;
+   }
+   &_dark,
+   &_black {
+      background-color: $gray-600 !important;
+   }
+   &_white {
+      background-color: $color-white !important;
+   }
+   &_gradient{
+    background:linear-gradient(88.75deg, #407DF1 17.55%, #95E5FF 121.65%)
+   }
+}
+//Border Line Color
+.line {
+   &_primary {
+      border: 1px solid $color-primary !important;
+   }
+   &_secondary {
+    border: 1px solid $color-primary !important;
+   }
+   &_success,
+   &_green {
+      border: 1px solid $color-green !important;
+   }
+   &_red,
+   &_danger {
+      border: 1px solid $color-red !important;
+   }
+   &_warning,
+   &_yellow {
+      border: 1px solid $color-yellow !important;
+   }
+   &_info {
+      border: 1px solid $color-blue !important;
+   }
+   &_light {
+      border: 1px solid $gray-50 !important;
+   }
+   &_orange {
+      border: 1px solid $color-orange !important;
+   }
+   &_olive {
+      border: 1px solid $color-olive !important;
+   }
+   &_teal {
+      border: 1px solid $color-teal !important;
+   }
+   &_blue {
+      border: 1px solid $color-blue !important;
+   }
+   &_violet {
+      border: 1px solid $color-violet !important;
+   }
+   &_purple {
+      border: 1px solid $color-purple !important;
+   }
+   &_pink {
+      border: 1px solid $color-pink !important;
+   }
+   &_brown {
+      border: 1px solid $color-brown !important;
+   }
+   &_gray {
+      border: 1px solid $gray-300 !important;
+   }
+   &_dark,
+   &_black {
+      border: 1px solid $gray-600 !important;
+   }
+   &_white {
+      border: 1px solid $color-white !important;
+   }
+}
+//Text Color
+.txt {
+    &_primary{
+      color: $color-primary !important;
+    }
+   &_success,
+   &_green {
+      color: $color-green !important;
+   }
+   &_red,
+   &_danger {
+      color: $color-red !important;
+   }
+   &_warning,
+   &_yellow {
+      color: $color-yellow !important;
+   }
+   &_info {
+      color: $color-blue !important;
+   }
+   &_light {
+      color: $gray-50 !important;
+   }
+   &_orange {
+      color: $color-orange !important;
+   }
+   &_olive {
+      color: $color-olive !important;
+   }
+   &_teal {
+      color: $color-teal !important;
+   }
+   &_blue {
+      color: $color-blue !important;
+   }
+   &_violet {
+      color: $color-violet !important;
+   }
+   &_purple {
+      color: $color-purple !important;
+   }
+   &_pink {
+      color: $color-pink !important;
+   }
+   &_brown {
+      color: $color-brown !important;
+   }
+   &_gray {
+      color: $gray-300 !important;
+   }
+   &_dark,
+   &_black {
+      color: $gray-600 !important;
+   }
+   &_white {
+      color: $color-white !important;
+   }
+}
+
+/* Alert Text */
+.txt_alert {
+   position: relative;
+   padding-left: 20px;
+   font-size: $fs-xs;
+   line-height: 1.42;
+   &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+   }
+   &.error {
+      color: $color-red;
+      &::before {
+         @include iconImgPath("ico_error.svg");
+         background-color:$color-red !important;
+      }
+   }
+   &.success {
+      color: $color-green;
+      &::before {
+         @include iconImgPath("ico_success.svg");
+         background-color:$color-green !important;
+      }
+   }
+}
+
+//텍스트 요소 가리기
+.blind {
+   @include blind;
+}
+
+//너비
+.w_full {
+   width: 100% !important;
+}
+.w_half {
+   width: 50% !important;
+}
+
+//Spacing Padding
+//variables.scss와 $sp동일하게
+.spp {
+   $paddings: 2, 4, 8, 12, 16, 24, 32, 40;
+   @each $item in $paddings {
+      &_t_#{$item} {
+         padding-top: #{$item}px !important;
+      }
+      &_r_#{$item} {
+         padding-right: #{$item}px !important;
+      }
+      &_l_#{$item} {
+         padding-left: #{$item}px !important;
+      }
+      &_b_#{$item} {
+         padding-bottom: #{$item}px !important;
+      }
+      &_tr_#{$item}, &_rt_#{$item} {
+         padding-top: #{$item}px !important;
+         padding-right: #{$item}px !important;
+      }
+      &_tl_#{$item}, &_lt_#{$item} {
+         padding-top: #{$item}px !important;
+         padding-left: #{$item}px !important;
+      }
+      &_tb_#{$item}, &_bt_#{$item}  {
+         padding-top: #{$item}px !important;
+         padding-bottom: #{$item}px !important;
+      }
+      &_rl_#{$item}, &_lr_#{$item} {
+         padding-right: #{$item}px !important;
+         padding-left: #{$item}px !important;
+      }
+      &_rb_#{$item}, &_br_#{$item} {
+         padding-right: #{$item}px !important;
+         padding-bottom: #{$item}px !important;
+      }
+      &_lb_#{$item}, &_bl_#{$item} {
+         padding-left: #{$item}px !important;
+         padding-bottom: #{$item}px !important;
+      }
+   }
+}
+//Spacing Margin
+//variables.scss와 $sp동일하게
+.spm {
+   $margins: 2, 4, 8, 12, 16, 24, 32, 40;
+   @each $item in $margins {
+      &_t_#{$item} {
+         margin-top: #{$item}px !important;
+      }
+      &_r_#{$item} {
+         margin-right: #{$item}px !important;
+      }
+      &_l_#{$item} {
+         margin-left: #{$item}px !important;
+      }
+      &_b_#{$item} {
+         margin-bottom: #{$item}px !important;
+      }
+      &_tr_#{$item}, &_rt_#{$item} {
+         margin-top: #{$item}px !important;
+         margin-right: #{$item}px !important;
+      }
+      &_tl_#{$item}, &_lt_#{$item} {
+         margin-top: #{$item}px !important;
+         margin-left: #{$item}px !important;
+      }
+      &_tb_#{$item}, &_bt_#{$item} {
+         margin-top: #{$item}px !important;
+         margin-bottom: #{$item}px !important;
+      }
+      &_rl_#{$item}, &_lr_#{$item}{
+         margin-right: #{$item}px !important;
+         margin-left: #{$item}px !important;
+      }
+      &_rb_#{$item}, &_br_#{$item}{
+         margin-right: #{$item}px !important;
+         margin-bottom: #{$item}px !important;
+      }
+      &_lb_#{$item}, &_bl_#{$item}{
+         margin-left: #{$item}px !important;
+         margin-bottom: #{$item}px !important;
+      }
+   }
+   &_t_auto{margin-top: auto !important;}
+   &_b_auto{margin-bottom: auto !important;}
+   &_r_auto{margin-right: auto !important;}
+   &_l_auto{margin-left: auto !important;}
+   &_tr_auto, &_rt_auto{margin-top: auto !important;margin-right:auto !important;}
+   &_tl_auto, &_tl_auto{margin-top: auto !important;margin-left:auto !important;}
+   &_tb_auto, &_tb_auto{margin-top: auto !important;margin-bottom:auto !important;}
+   &_rl_auto, &_rl_auto{margin-right: auto !important;margin-left:auto !important;}
+   &_rb_auto, &_rb_auto{margin-right: auto !important;margin-bottom:auto !important;}
+   &_lb_auto, &_lb_auto{margin-left: auto !important;margin-bottom:auto !important;}
+}
+/**  Align **/
+//Layout align
+.row{
+   display: flex;
+   flex-direction: row;
+   justify-content: start;
+   &_horizen{
+      flex-direction: row !important;
+   }
+   &_vertical{
+      flex-direction: column !important;
+   }
+}
+//Flex align
+.justify_content_start{
+   justify-content: flex-start !important;
+}
+.justify_content_end{
+   justify-content: flex-end !important;
+}
+.justify_content_center{
+   justify-content: center !important;
+}
+.align_items_start{
+   align-items: flex-start !important;
+}
+.align_items_center{
+   align-items: center !important;
+}
+.align_items_end{
+   align-items: flex-end !important;
+}
+
+//Text align
+.txt {
+   &_left {
+      text-align: left !important;
+   }
+   &_right {
+      text-align: right !important;
+   }
+   &_center {
+      text-align: center !important;
+   }
+}
+
+//Text decoration
+.txt{
+  &_deco_under{
+    text-decoration: underline;
+  }
+  &_deco_through{
+    text-decoration: line-through;
+  }
+}
+
+@media (hover: hover) {
+  //Hover effect
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+    <defs>
+        <clipPath id="mja1eduzha">
+            <path style="fill:none" d="M0 0h60v12H0z"/>
+        </clipPath>
+    </defs>
+    <path style="fill:none" d="M0 0h140v140H0z"/>
+    <g transform="translate(54.001 84)" style="clip-path:url(#mja1eduzha)">
+        <rect data-name="box" width="12" height="12" rx="3" style="fill:#1a1818"/>
+        <rect data-name="box" width="12" height="12" rx="3" transform="translate(16)" style="fill:#1a1818"/>
+        <rect data-name="box" width="12" height="12" rx="3" transform="translate(32)" style="fill:#1a1818"/>
+        <rect data-name="box" width="12" height="12" rx="3" transform="translate(48)" style="fill:#1a1818"/>
+    </g>
+    <g data-name="box" transform="translate(54.001 68)" style="clip-path:url(#mja1eduzha)">
+        <rect data-name="box" width="12" height="12" rx="3" style="fill:#1a1818"/>
+        <rect data-name="box" width="12" height="12" rx="3" transform="translate(16)" style="fill:#1a1818"/>
+        <rect data-name="box" width="12" height="12" rx="3" transform="translate(32)" style="fill:#1a1818"/>
+        <rect data-name="box" width="12" height="12" rx="3" transform="translate(48)" style="fill:#1a1818"/>
+    </g>
+    <g>
+        <path d="M594.1 3154.324h-11.392v-62.664a6.385 6.385 0 0 0-6.357-6.4h-5.225v-4.532a5.339 5.339 0 1 0-10.678 0v4.532h-5.793v-4.532a5.34 5.34 0 1 0-10.679 0v4.532h-5.796v-4.532a5.339 5.339 0 1 0-10.678 0v4.532h-5.793v-4.532a5.34 5.34 0 1 0-10.679 0v4.532h-5.23a6.385 6.385 0 0 0-6.358 6.4v26.117h-31.46a1.5 1.5 0 0 0-1.19.592 1.519 1.519 0 0 0-.251 1.314 33.7 33.7 0 0 1-.006 17.506 1.512 1.512 0 0 0 .266 1.3 1.494 1.494 0 0 0 1.181.582h1.729a10.666 10.666 0 0 0-.115 15.168l-8.514-.007a1.5 1.5 0 0 0 0 3.009c23.1.111 47.345.132 60.562.113a1.5 1.5 0 0 0 0-3.009h-3.1a1.4 1.4 0 0 0-.326-.068l-15.787-.012v-50.49h77.281v50.551l-48.666-.037a1.366 1.366 0 0 0-.282.057h-.652a1.5 1.5 0 0 0 0 3.009h51.1c.031 0 .057-.017.088-.018h12.8a1.5 1.5 0 0 0 0-3.009zm-94.652-33.541v5.975h-28.797a35.121 35.121 0 0 0-.755-5.975zm-29.576 15.272a38.8 38.8 0 0 0 .77-5.966h28.806v5.966H469.87zm6.209 18.181a7.621 7.621 0 0 1 .99-15.172h22.378v5.975h-6.289c-.641 0-1.146.751-1.146 1.667s.505 1.666 1.146 1.666h6.289v5.883zm87.357-73.51a2.35 2.35 0 1 1 4.7 0v10.341a2.35 2.35 0 1 1-4.7 0zm-16.473 0a2.35 2.35 0 1 1 4.7 0v10.341a2.35 2.35 0 1 1-4.7 0zm-16.471 0a2.35 2.35 0 1 1 4.7 0v10.341a2.35 2.35 0 1 1-4.7 0zm-16.473 0a2.35 2.35 0 1 1 4.7 0v10.341a2.35 2.35 0 1 1-4.7 0zm-11.584 20.031v-9.1a3.382 3.382 0 0 1 3.369-3.389h5.225v2.8a5.34 5.34 0 1 0 10.679 0v-2.8h5.79v2.8a5.339 5.339 0 1 0 10.678 0v-2.8h5.793v2.8a5.34 5.34 0 1 0 10.679 0v-2.8h5.793v2.8a5.339 5.339 0 1 0 10.678 0v-2.8h5.225a3.381 3.381 0 0 1 3.367 3.389v9.1z" transform="translate(-457.591 -3046.353)" style="fill:#1a1818"/>
+    </g>
+</svg>

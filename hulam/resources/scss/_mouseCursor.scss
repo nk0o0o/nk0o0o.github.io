@@ -1,0 +1,69 @@
+#movingCursor {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  will-change: transform;
+  width: 86px;
+  height: 86px;
+  padding: 12px;
+  .cursor_circle {
+    opacity: 0;
+    z-index: 3001;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: scale(0);
+    transform-origin:0% 0%;
+    border: 2px solid rgba($gray-600, 0.5);
+    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+      transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+      border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    &::after, &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+    &::after{
+      left: calc(0% - 20px);
+      background: url('../images/cursor/ico_drag_left-b.svg') center/contain no-repeat;
+    }
+    &::before{
+      right: calc(0% - 20px);
+      background: url('../images/cursor/ico_drag_right-b.svg') center/contain no-repeat;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #movingCursor{
+    .cursor_circle {
+      &::after, &::before{
+        opacity: 0.3;
+      }
+    }
+    &.subtle .cursor_circle{
+      transform: scale(1) translate3d(-50%, -50%, 0);
+      opacity: 1;
+    }
+    &.cursor-drag .cursor_circle{
+      transform: scale(0.8) translate3d(-50%, -50%, 0);
+      &::after{
+        left: calc(0% - 40px);
+      }
+      &::before{
+        right: calc(0% - 40px);
+      }
+    }
+  }
+}

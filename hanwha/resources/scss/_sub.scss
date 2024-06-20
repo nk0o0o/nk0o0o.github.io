@@ -1,0 +1,402 @@
+// SUB : Why We Exist
+.sub_exist{
+  &#container{
+    background-color: #fafafa;
+  }
+  section{
+    h2{
+      text-align: center;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .parallax{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-white;
+      z-index: 1;
+      background-image:none;
+      position: relative;
+      overflow: hidden;
+      &_img{
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-attachment: fixed;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    .inner{
+      z-index: 1;
+      position: relative;
+    }
+  }
+  .sec_intro{
+    position: relative;
+    h2{
+      text-align: center;
+      font-size: 5.525rem;
+      font-weight: $fw-l;
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: 1.15;
+      letter-spacing: -5.6px;
+      @media screen and (max-width: $breakpoint-tablet){
+        font-size: 3.9rem;
+      }
+    }
+    .scroll_bg{
+      position: absolute;
+      z-index: -1;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $gray-600;  
+      opacity: 0;
+    }
+    .parallax{
+      width: 85%;
+      margin: 0 auto;
+      &_img{
+        background-image: url("../images/exsist/kv1.jpg");
+        animation: changeBgImg 10s infinite;
+        @keyframes changeBgImg {
+          25%{
+            background-image: url("../images/exsist/kv1.jpg");
+          }
+          50%{
+            background-image:url("../images/exsist/kv2.jpg");
+          }
+          75%{
+            background-image:url("../images/exsist/kv3.jpg");
+          }
+          100%{
+            background-image: url("../images/exsist/kv1.jpg");
+          }
+        }
+      }
+      &.fadeUp{
+        animation-delay: 0.5s
+      }
+    }
+    .slogan{
+      @include flexCenter();
+      height: 96vh;
+      span{
+        display: inline-block;
+      }
+      .fadeUp{
+        &:nth-child(2){
+          animation-delay: 0.25s
+        }
+      }
+    }
+  }
+  .txt_slogan{
+    font-size: 2rem;
+    font-weight: $fw-l;
+    text-align: center;
+    letter-spacing:-1.16px;
+  }
+}
+
+.sub_menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  padding: 0 0;
+  visibility: hidden;
+  transition: padding 0.5s ease-in, visibility 0.2s 0.3s;
+  will-change: padding, visibility;
+  .inner{
+    display: flex;
+    justify-content: space-between;
+    gap: 8%;
+    width: 90%;
+    margin: 0 auto;
+  }
+  li{
+    flex:1;
+    position: relative;
+    color: $gray-600;
+    font-size: $fs-s;
+    transition: color 0.3s;
+    will-change: color;
+    text-align: center;
+    cursor: pointer;
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background-color: $gray-600;
+      transition: width 300ms ease-out, background-color 0.3s;
+      will-change: width, background-color;
+    }
+    &.active{
+      &::after{
+        width: 100%;
+      }
+    }
+  }
+  &.fixed{
+    top: 0;
+    padding: 32px 0;
+    visibility: visible;
+  }
+  &.type_white{
+    li{
+      color: $color-white;
+      transition: color 0.3s;
+      will-change: color;
+      &::after{
+        background-color: $color-white;
+        transition: width 300ms ease-out, background-color 0.3s;
+        will-change: width, background-color;
+      }
+    }
+  }
+}
+.article_list{
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 250px 140px;
+  padding: 0 100px; 
+  li{
+    p{
+      font-size: $fs-lg;
+      margin-top: 40px;
+      line-height: 1.6;
+    }
+    &:nth-child(2n){
+      margin-top: 500px;
+    }
+    &:nth-child(2n+1){
+      margin-top: -500px;
+    }
+    &:nth-child(1){
+      margin-top: 0;
+    }
+  }
+  &.reverse{
+    li{
+      &:nth-child(2n+1){
+        margin-top: 500px;
+      }
+      &:nth-child(2n){
+        margin-top: 0;
+      }
+      &:nth-child(3n){
+        margin-top: -500px;
+        grid-column: 2 / 3;
+      }
+    }
+  }
+}
+.sec_purpose{
+  .parallax_img{
+    background: url('../images/exsist/kv2.jpg') center/cover no-repeat;
+  }
+}
+.sec_devotion{
+  .parallax_img{
+    background: url('../images/exsist/nation-kv.jpg') center/cover no-repeat;
+  }
+}
+.sec_world{
+  .parallax_img{
+    background: url('../images/exsist/world-kv.jpg') center/cover no-repeat;
+  }
+}
+.sec_inval{
+  .parallax_img{
+    background: url('../images/exsist/world-kv.jpg') center/cover no-repeat;
+  }
+}
+.sec_tomorrow{
+  .parallax_img{
+    background: url('../images/exsist/tomorrow-kv.jpg') center/cover no-repeat;
+  }
+}
+.sec_closing{
+   .inner{
+    bottom: -15%;
+  }
+  border: 1px solid;
+  background-color: $color-white;
+  .parallax{
+    height: 600px;
+    .inner{
+      color: $gray-600;
+    }
+  }
+}
+// SUB : Sustainable technologies
+.sub_sustain{
+  .sec_intro{
+    .parallax{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 66vh;
+      color: $color-white;
+      background-image: url("../images/sustain/img_sustain_kv.png");
+      h2{
+        text-align: center;
+        font-size: 5.525rem;
+        font-weight: $fw-l;
+        font-family: 'Noto Sans KR', sans-serif;
+        line-height: 1.15;
+        letter-spacing: -5.6px;
+      }
+    }
+    @media screen and (max-width: $breakpoint-tablet){
+      .parallax{
+        height: 60vh;
+        h2{
+          font-size: 3.9rem;
+          padding: 0 24px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  h4{
+    font-weight: $fw-l;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -3px;
+    font-size: 3.95rem;
+    line-height: 1;
+    @media screen and (max-width: $breakpoint-tablet){
+      font-size: 2.25rem;
+    }
+  }
+  .sec_slogan{
+    margin: 100px 0 0 0;
+    padding-bottom: 72px;
+    h3{
+      padding-right: 64px;
+      font-size: 2.625rem;
+    }
+    p{
+      margin-top: 48px;
+      width: 55%;
+      color: $gray-300;
+    }
+    @media screen and (max-width: $breakpoint-tablet){
+      margin: 60px 0 0 0;
+      padding-bottom: 48px;
+      h3{
+        padding-right: 0;
+        font-size: $fs-l;
+      }
+      p{
+        width: 100%;
+        margin-top: 24px;
+        font-size: $fs-s;
+      }
+    }
+  }
+}
+.sec_sticky{
+  border-top: 1px solid $color-border;
+  .inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  .stick_box{
+    flex:2;
+    position: sticky;
+    min-width: 280px;
+    top: 0;
+    padding-top: 150px;
+    height: 100vh;  
+  }
+  ul{
+    flex:3;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 230px 8% 0;
+  }
+  li{
+    margin-bottom: 152px;
+    h4{
+      margin-top: 52px;
+      & +.tit{
+        margin-top: 46px;
+      }
+    }
+    .tit{
+      margin-top: 32px;
+      font-size:$fs-md;
+      line-height: 1.4;
+    }
+    .desc{
+      margin-top: 18px;
+      line-height: 1.4;
+      color: $gray-500;
+    }
+    img{
+      display: block;
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: $breakpoint-desktop){
+    h3{
+      font-size: 3.4rem;
+    }
+  }
+  @media screen and (max-width: $breakpoint-tablet){
+    h3{
+      font-size: 2.2rem;
+    }
+    .inner{
+      flex-direction: column;
+    }
+    .stick_box, ul{
+      flex-basis: auto;
+      height: auto;
+    }
+    .stick_box{
+      position: static;
+      padding-top: 60px;
+      min-width:auto;
+    }
+    ul{
+      padding:60px 0 72px 14%;
+      max-width: none;
+    }
+    li{ 
+      margin-bottom: 48px;
+      h4{
+        margin-top: 32px;
+        &+ .tit{
+          margin-top: 32px;
+        }
+      }
+      .tit{
+        margin-top: 24px;
+        font-size: $fs-m;
+      }
+      .desc{
+        margin-top: 12px;
+        font-size: $fs-s;
+      }
+    }
+    &:nth-last-of-type(1){
+      ul{
+        padding-bottom: 0;
+      }
+    }
+  }
+}

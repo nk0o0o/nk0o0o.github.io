@@ -1,0 +1,37 @@
+@charset "utf-8";  
+
+// 공통 변수 설정
+@import '_variables';
+
+// mixin 설정
+@import '_mixin';
+
+//common 
+@import '_reset';
+@import '_font';
+@import '_mouseCursor';
+
+//components 
+@import '_component';
+
+@import '_icon';
+@import '_buttons';
+@import '_toggles';
+@import '_fileUploader';
+@import '_checks_radios';
+@import '_dropdowns';
+@import '_textFields';
+@import '_tabs';
+@import '_badges';
+@import '_tables';
+@import '_accordion';
+@import '_pagination';
+@import '_progressbar';
+@import '_slider';
+@import '_modal';
+
+//common component
+@import '_common'; //header, footer, gnb, lnb...
+//pages
+@import '_main';
+@import '_sub';

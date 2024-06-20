@@ -1,0 +1,307 @@
+/* Table */
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+   border-color: inherit;
+   border-style: solid;
+   border-width: 0;
+   button {
+      background-color: transparent;
+   }
+}
+th,
+td {   
+   padding: 0 $sp05 0;
+   font-size: $fs-xs;
+   font-weight: $fw-n;
+   color: $gray-600;
+   line-height: 19px;
+   vertical-align: middle;
+   white-space: nowrap;
+   > * {
+      font-size: $fs-xs;
+      color: $gray-600;
+   }
+}
+th {
+   background-color: $gray-10;
+}
+
+.tbl {
+   //테이블 감싸는 테두리
+   border: 1px solid $gray-100;
+   thead {
+      vertical-align: bottom;
+      th,
+      td {
+         padding-top: 10px;
+         padding-bottom: 10px;
+         font-weight: $fw-m;
+         color: $gray-400;
+         line-height: 15.5px;
+         border-bottom-width: 0;
+         background-color: $gray-10;
+      }
+      th {
+         position: relative;
+         font-weight: $fw-m;
+         text-align: left;
+      }
+      .bg_primary {
+         th,
+         td {
+            color: $color-white;
+         }
+      }
+   }
+   tbody {
+      vertical-align: inherit;
+      border-top: 1px solid $gray-100;
+   }
+   & > :not(caption) > * > * {
+      padding: $sp04 $sp05;
+      //th td의 테두리
+      border-bottom-width: 1px;
+      border-right-width: 1px;
+      border-color: $gray-100;
+   }
+   //tbody 구분선
+   &_divider {
+      border-color: $gray-600 !important;
+   }
+   //Vertical 테이블
+   &_vert {
+      &_th {
+         width: 203px;
+      }
+   }
+   //Single line 테이블
+   &_line {
+      border: 0;
+      thead th {
+         background-color: transparent;
+      }
+      & > :not(caption) > * > * {
+         border-right-width: 0;
+      }
+   }
+   //스트라이프 row 테이블
+   &_striped {
+      border: none;
+      thead {
+         th {
+            background-color: $color-white;
+         }
+      }
+      tbody {
+         tr {
+            &:nth-child(odd) {
+               td {
+                  background-color: $gray-10;
+               }
+            }
+            &:nth-child(even) {
+               td {
+                  background-color: $color-white;
+               }
+            }
+         }
+      }
+      & > :not(caption) > * > * {
+         border-right-width: 0;
+      }
+   }
+   //문단 셀 td
+   .td_cont {
+      width: 578px;
+      min-width: 578px;
+      white-space: normal;
+   }
+   tr.merged_row {
+      th,
+      td {
+         border-top: 1px solid $gray-100;
+      }
+   }
+   //색상
+   &_primary {
+      background-color: $color-primary;
+      th,
+      td {
+         color: $color-white !important;
+      }
+   }
+   &_col {
+      &_check {
+         width: 56px;
+      }
+   }
+   &_btn_area {
+      width: 100%;
+      @include flexStart;
+      .right {
+         margin-left: auto;
+      }
+   }
+}
+
+/* Data Table */
+div.dataTables {
+   &_wrapper {
+      &::after {
+         content: "";
+         display: block;
+         clear: both;
+      }
+      .dt-buttons {
+         @include flexStart;
+         button {
+            display: block;
+         }
+         button + button {
+            margin-left: 8px;
+         }
+      }
+      width: 100%;
+      //페이지 표시 건 기능
+      div.dataTables_length {
+         float: right;
+         label {
+            position: relative;
+            margin-bottom: 8px;
+            &::after {
+               @include selectArrow;
+            }
+         }
+         select.input-sm {
+            width: 160px;
+            height: 38px;
+            border-color: $gray-100;
+            box-shadow: none;
+            &:focus {
+               box-shadow: none;
+               outline: none;
+            }
+         }
+         &.on {
+            label {
+               &::after {
+                  transform: rotate(180deg) translateY(50%);
+               }
+            }
+         }
+      }
+      //검색 결과 정보
+      div.dataTables_info {
+         float: left;
+         padding-top: 14px;
+         font-size: $fs-xs;
+         color: #1a1818;
+      }
+      //페이지네이션
+      div.dataTables_paginate {
+         margin-top: $sp05;
+         text-align: center;
+         .pagination > .active > a,
+         .pagination > .active > a:focus,
+         .pagination > .active > a:hover,
+         .pagination > .active > span,
+         .pagination > .active > span:focus,
+         .pagination > .active > span:hover {
+            border-color: $color-primary;
+            background-color: $color-primary;
+         }
+         .paginate_button{
+            & > a{
+               margin: $sp01;
+            }
+         }
+      }
+      //테이블
+      table.dataTable {
+         margin-top: 8px !important;
+         margin-bottom: 8px !important;
+         th.select-checkbox,
+         td.select-checkbox {
+            text-align: center;
+         }
+         td {
+            input[type="checkbox"] {
+               display: none;
+            }
+         }
+         input[type="checkbox"],
+         input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            border-color: $gray-100;
+         }
+         td.select-checkbox:before,
+         th.select-checkbox:before {
+            width: 20px;
+            height: 20px;
+            border-color: $gray-100;
+         }
+         tbody > tr.selected,
+         tbody > tr > .selected {
+            background-color: rgba($color-primary, 0.051);
+         }
+         tr.selected td.select-checkbox:after,
+         tr.selected th.select-checkbox:after {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-image: url("../images/icon/ico_check_checked.svg");
+         }
+         td.select-checkbox:before,
+         td.select-checkbox:after,
+         th.select-checkbox:before,
+         th.select-checkbox:after {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            margin: 0;
+         }
+         thead .sorting:after {
+            content: "";
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            @include iconImgPath("ico_arr_sort.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+         }
+         thead .sorting_asc:after,
+         thead .sorting_desc:after {
+            content: "";
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            @include iconImgPath("ico_arr_sort.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+         }
+      }
+      //버튼 포커스 아웃라인 제거
+      .btn.active.focus,
+      .btn.active:focus,
+      .btn.focus,
+      .btn:active.focus,
+      .btn:active:focus,
+      .btn:focus {
+         outline: none;
+      }
+   }
+}

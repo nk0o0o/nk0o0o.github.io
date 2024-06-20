@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAIN</title>
+  <script src="../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../resources/js/gsap.min.js"></script>
+  <script src="../resources/js/ScrollTrigger.min.js"></script>  
+  <script src="../resources/js/swiper.min.js"></script>
+  <script src="../resources/js/common.js"></script>
+  <link rel="stylesheet" href="../resources/css/swiper.min.css">
+  <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<body>
+  <!-- 마우스 커서 효과 -->
+  <div id="movingCursor">
+    <div class="cursor_circle"></div>
+  </div>
+  <!-- // 마우스 커서 효과 -->
+  <div id="wrap">
+    <!-- site_map -->
+    <div class="site_map">
+      <nav class="inner">
+        <ul class="depth_1 accord_list arr_right_list">
+          <li class="accord_head">
+            <a href="#" class="accord_tit">WHO WE ARE</a>
+            <ul class="depth_2 accord_cont">
+              <li><a href="#">기업소개</a></li>
+              <li><a href="#">연혁</a></li>
+              <li>
+                <a href="#">사업장 소개</a>
+                <ul class="depth_3">
+                  <li><a href="#">국내사업장</a></li>
+                  <li><a href="#">해외사업장</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- //depth_2 -->
+          </li>
+          <li class="accord_head no_cont">
+            <a href="#" class="accord_tit">WHY WE EXIST</a>
+          </li>
+          <li class="accord_head">
+            <a href="#" class="accord_tit">WHAT WE DO</a>
+            <!-- depth_2 -->
+            <ul class="depth_2 accord_cont">
+              <li><a href="#">Virtual<span class="br_pc">&nbsp;</span>Showroom</a></li>
+              <li><a href="#">Sustainable<span class="br_pc">&nbsp;</span>Technologies</a></li>
+              <li>
+                <a href="#">Products&<span class="br_pc">&nbsp;</span>Services</a>
+                <ul class="depth_3">
+                  <li><a href="#">Space</a></li>
+                  <li><a href="#">Air</a></li>
+                  <li><a href="#">Land</a></li>
+                  <li><a href="#">Sea</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Discover</a></li>
+              <li><a href="#">Protect</a></li>
+            </ul>
+            <!-- //depth_2 -->
+          </li>
+          <li class="accord_head">
+            <a href="#" class="accord_tit">IR</a>
+            <!-- depth_2 -->
+            <ul class="depth_2 accord_cont">
+              <li><a href="#">실적발표</a></li>
+              <li><a href="#">IR 일정</a></li>
+              <li>
+                <a href="#">재무정보</a>
+                <ul class="depth_3">
+                  <li><a href="#">연결 재무제표</a></li>
+                  <li><a href="#">별도 재무제표</a></li>
+                </ul>
+              </li>
+              <li><a href="#">주식정보</a></li>
+              <li><a href="#">공시정보</a></li>
+              <li>
+                <a href="#">전자공고</a>
+                <ul class="depth_3">
+                  <li><a href="#">공고</a></li>
+                  <li><a href="#">사업보고서</a></li>
+                  <li><a href="#">감사보고서</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- // depth_2 -->
+          </li>
+          <li class="accord_head">
+            <a href="#" class="accord_tit">MEDIA</a>
+            <!-- depth_2 -->            
+            <ul class="depth_2 accord_cont">
+              <li><a href="#">뉴스룸</a></li>
+              <li><a href="#">라이브러리</a></li>
+              <li><a href="#">공지사항</a></li>
+            </ul>
+            <!-- // depth_2 -->
+          </li>
+          <li class="accord_head">
+            <a href="#" class="accord_tit">ESG</a>
+            <!-- depth_2 -->            
+            <ul class="depth_2 accord_cont">
+              <li><a href="#">지속가능경영</a></li>
+              <li>
+                <a href="#">윤리준법경영</a>
+                <ul class="depth_3">
+                  <li><a href="#">윤리준법경영 소개</a></li>
+                  <li><a href="#">주요 프로그램</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">환경안전보건경영</a>
+                <ul class="depth_3">
+                  <li><a href="#">환경안전보건경영 소개</a></li>
+                  <li><a href="#">주요 프로그램</a></li>
+                </ul>
+              </li>
+              <li><a href="#">상생경영</a></li>
+              <li><a href="#">사회공헌</a></li>
+              <li>
+                <a href="#">기업지배구조</a>
+                <ul class="depth_3">
+                  <li><a href="#">기업지배구조</a></li>
+                  <li><a href="#">이사회</a></li>
+                  <li><a href="#">정관 및 기타규정</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- // depth_2 -->            
+          </li>
+          <li class="accord_head">
+            <a href="#" class="accord_tit">CAREERS</a>
+            <!-- depth_2 -->
+            <ul class="depth_2 accord_cont">
+              <li><a href="#">인재상</a></li>
+              <li><a href="#">채용안내</a></li>
+            </ul>
+            <!-- // depth_2 -->            
+          </li>
+        </ul>
+        <div class="site_map_btm">
+          <a href="#" class="btn btn_xl btn_text btn_white"><span>방문신청</span><i class="ico_arr_right ico_16 is_right"></i></a>
+          <a href="#" class="btn btn_xl btn_text btn_white"><span>전자조달시스템</span><i class="ico_arr_right ico_16 is_right"></i></a>
+        </div>
+      </nav>
+    </div>
+    <!-- //site_map -->
+    <!-- header -->
+    <header>
+      <h1 class="h_logo"><a href="#" title="한화에어로스페이스 메인으로 이동"></a></h1>
+      <!-- gnb -->
+      <nav class="gnb">
+        <span class="gnb_pointer"></span>
+        <ul class="depth_1">
+          <li>
+            <a href="#">WHO WE ARE</a>
+            <ul class="depth_2">
+              <li><a href="#">기업소개</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">사업장 소개</a></li>
+            </ul>
+            <!-- //depth_2 -->
+          </li>
+          <li>
+            <a href="#">WHY WE EXIST</a>
+          </li>
+          <li>
+            <a href="#">WHAT WE DO</a>
+            <!-- depth_2 -->
+            <ul class="depth_2">
+              <li><a href="#">Virtual Showroom</a></li>
+              <li><a href="#">Sustainable Technologies</a></li>
+              <li><a href="#">Products & Services</a></li>
+              <li><a href="#">Discover</a></li>
+              <li><a href="#">Protect</a></li>
+            </ul>
+            <!-- //depth_2 -->
+          </li>
+          <li>
+            <a href="#">IR</a>
+            <!-- depth_2 -->
+            <ul class="depth_2">
+              <li><a href="#">실적발표</a></li>
+              <li><a href="#">IR 일정</a></li>
+              <li><a href="#">재무정보</a></li>
+              <li><a href="#">주식정보</a></li>
+              <li><a href="#">공시정보</a></li>
+              <li><a href="#">전자공고</a></li>
+            </ul>
+            <!-- // depth_2 -->
+          </li>
+          <li>
+            <a href="#">MEDIA</a>
+            <!-- depth_2 -->            
+            <ul class="depth_2">
+              <li><a href="#">뉴스룸</a></li>
+              <li><a href="#">라이브러리</a></li>
+              <li><a href="#">공지사항</a></li>
+            </ul>
+            <!-- // depth_2 -->
+          </li>
+          <li>
+            <a href="#">ESG</a>
+            <!-- depth_2 -->            
+            <ul class="depth_2">
+              <li><a href="#">지속가능경영</a></li>
+              <li><a href="#">윤리준법경영</a></li>
+              <li><a href="#">환경안전보건경영</a></li>
+              <li><a href="#">상생경영</a></li>
+              <li><a href="#">사회공헌</a></li>
+              <li><a href="#">기업지배구조</a></li>
+            </ul>
+            <!-- // depth_2 -->            
+          </li>
+          <li>
+            <a href="#">CAREERS</a>
+            <!-- depth_2 -->
+            <ul class="depth_2">
+              <li><a href="#">인재상</a></li>
+              <li><a href="#">채용안내</a></li>
+            </ul>
+            <!-- // depth_2 -->            
+          </li>
+        </ul>
+      </nav>
+      <!-- h_util -->
+      <div class="h_util">
+        <div class="h_language">
+          <button type="button" class="ico_global"><span class="blind">언어선택버튼</span></button>
+          <div class="lang">
+            <a href="#" class="is_selected">KOR</a>
+            <a href="#">ENG</a>
+          </div>
+        </div>
+        <div class="h_link"><a href="#">방문신청</a></div>
+        <div class="h_allmenu">
+          <button type="button" class="btn_hamburger is_closed">
+            <span class="blind">전체메뉴 보기</span>
+            <span class="left"></span>
+            <span></span>
+            <span class="right"></span>
+          </button>
+        </div>
+      </div>
+      <!-- h_util -->
+    </header>
+    <!--// header -->
+
+    <!-- container -->
+    <main id="container" class="main_type">
+      <!-- section -->
+      <section class="sec_visual">
+        <div class="video_area">
+          <video preload="auto" autoplay="autoplay" loop="loop" muted="muted" volume="0">
+            <source src="../resources/videos/videoView.mp4" type="video/mp4"/>
+          </video>
+        </div>
+        <div class="text_area">
+          <div class="row">
+            <p class="txt_white txt_body2">The innovating pioneer for a sustainable tomorrow</p>
+            <button class="btn btn_icon btn_srl_down ani_hover">
+              <div class="ani_group">
+                <i class="ico_scrl_down ico_16"></i>
+                <i class="ico_scrl_down ico_16"></i>
+              </div>
+            </button>
+          </div>
+          <div class="progressbar"><span></span></div>
+        </div>
+      </section>
+      <!-- // section -->
+      <!-- section -->
+      <section class="sec_slogan">
+        <div class="inner">
+          <h2>우리는 첨단 기술로<br>내일을 생각합니다.</h2>
+          <a href="#" class="btn btn_xl btn_text ani_hover">
+            <div class="ani_group">
+              <span>WHAT WE DO</span>
+              <span>WHAT WE DO</span>
+            </div>
+            <i class="ico_arr_right ico_16 is_right"></i>
+          </a>
+        </div>
+        <div class="parallax_wrap">
+          <div class="parallax"></div>
+          <ul class="slogan_list">
+            <li class="protect">
+              <p class="txt_white">우리의 솔루션으로 지구보호와<br>세계 평화를 추구합니다.</p>
+              <a href="#" class="btn btn_xl btn_text btn_white ani_hover">
+                <div class="ani_group">
+                  <span>PROTECT</span>
+                  <span>PROTECT</span>
+                </div>
+                <i class="ico_arr_right ico_16 is_right"></i>
+              </a>
+            </li>
+            <li class="tech">
+              <p class="txt_white">지속가능한 성장을 위한<br>핵심기술 개발에 집중합니다.</p>
+              <a href="#" class="btn btn_xl btn_text btn_white ani_hover">
+                <div class="ani_group">
+                  <span>SUSTAINABLE TECHNOLOGIES</span>
+                  <span>SUSTAINABLE TECHNOLOGIES</span>
+                </div>
+                <i class="ico_arr_right ico_16 is_right"></i>
+              </a>
+            </li>
+            <li class="discover">
+              <p class="txt_white">미지의 영역에서 미래를 위한<br>성장 동력을 발견합니다.</p>
+              <a href="#" class="btn btn_xl btn_text btn_white ani_hover">
+                <div class="ani_group">
+                  <span>DISCOVER</span>
+                  <span>DISCOVER</span>
+                </div>
+                <i class="ico_arr_right ico_16 is_right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- // section -->
+      <!-- section -->
+      <section class="sec_product">
+        <div class="swiper swiper_product">
+          <ul class="swiper-wrapper" cursor-class="subtle">
+            <li class="swiper-slide nuri"  ondrop="alert('gkgk')">
+              <div class="cont_area inner">
+                <h3>누리호</h3>
+                <p>누리호 사업으로 발사체 기술을 고도화하여, 미래 우주산업 생태계를 주도적으로 구축합니다.</p>
+                <a href="#" class="btn btn_xl btn_text ani_hover">
+                  <div class="ani_group">
+                    <span>VIEW MORE</span>
+                    <span>VIEW MORE</span>
+                  </div>
+                  <i class="ico_arr_right ico_16 is_right"></i>
+                </a>
+              </div>
+            </li>
+            <li class="swiper-slide k9">
+              <div class="cont_area inner">
+                <h3>K9 Self-Propelled<br>Howitzer</h3>
+                <p>세계 최고 수준의 운용성능과 끊임없는 성능개선을 통하여 전 세계 자주포 시장을 석권하고 있는 대한민국의 명품 자주포입니다.</p>
+                <a href="#" class="btn btn_xl btn_text ani_hover">
+                  <div class="ani_group">
+                    <span>VIEW MORE</span>
+                    <span>VIEW MORE</span>
+                  </div>
+                  <i class="ico_arr_right ico_16 is_right"></i>
+                </a>
+              </div>
+            </li>
+            <li class="swiper-slide redback">
+              <div class="cont_area inner">
+                <h3>REDBACK</h3>
+                <p>레드백은 기동력, 방호력, 화력 등 모든 분야에서 세계 최고 성능을 갖추고 있는 미래형 보병전투장갑차 입니다.</p>
+                <a href="#" class="btn btn_xl btn_text ani_hover">
+                  <div class="ani_group">
+                    <span>VIEW MORE</span>
+                    <span>VIEW MORE</span>
+                  </div>
+                  <i class="ico_arr_right ico_16 is_right"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper-pagination-btn btn_area"></div>
+        </div>
+      </section>
+      <!-- // section -->
+      <!-- section -->
+      <section class="sec_showroom">
+        <div class="inner">
+          <h2 class="txt_white">Virtual Showroom</h2>
+          <p class="txt_white">인터렉티브 전시관에서 한화에어로스페이스의<br>대표 제품들을 직접 경험할 수 있습니다.</p>
+          <a href="#" class="btn btn_xl btn_text btn_white ani_hover">
+            <div class="ani_group">
+              <span>GO EXPERIENCE</span>
+              <span>GO EXPERIENCE</span>
+            </div>
+            <i class="ico_arr_right ico_16 is_right"></i>
+          </a>
+        </div>
+      </section>
+      <!-- // section -->
+      <!-- section -->
+      <section class="sec_news">
+        <div class="inner">
+          <div class="tit_area">
+            <h2>News & Media</h2>
+            <a href="#" class="btn btn_xl btn_text ani_hover">
+              <div class="ani_group">
+                <span>VIEW MORE</span>
+                <span>VIEW MORE</span>
+              </div>
+              <i class="ico_arr_right ico_16 is_right"></i>
+            </a>
+          </div>
+          <ul class="news_list">
+            <li>
+              <a href="#"></a>
+              <div class="cate">NEWS</div>
+              <div class="title">한화, '우주의 조약돌' 2기 완료 ... "우주 인재 육성 인프라 구축"</div>
+              <div class="date">2024.01.08</div>
+              <div class="img_area">
+                <img src="../resources/images/main/imageView-1.jpg" alt>
+              </div>
+            </li>
+            <li>
+              <a href="#"></a>
+              <div class="cate">NEWS</div>
+              <div class="title">한화에어로스페이스, 다목적 무인차량 美 현지 성능시험 최초 진행</div>
+              <div class="date">2024.01.04</div>
+              <div class="img_area">
+                <img src="../resources/images/main/imageView-2.jpg" alt>
+              </div>
+            </li>
+            <li>
+              <a href="#"></a>
+              <div class="cate">NEWS</div>
+              <div class="title">한화에어로스페이스, '24년 1분기 경력사원 채용</div>
+              <div class="date">2023.12.20</div>
+              <div class="img_area">
+                <img src="../resources/images/main/imageView-3.jpg" alt>
+              </div>
+            </li>
+            <li>
+              <a href="#"></a>
+              <div class="cate">NEWS</div>
+              <div class="title">한화, 호주와 '레드백장갑차' 최종 계약... "첫수출 기획 방산 제품 결실"</div>
+              <div class="date">2023.12.08</div>
+              <div class="img_area">
+                <img src="../resources/images/main/imageView-4.jpg" alt>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- // section -->
+      <!-- section -->
+      <section class="sec_partners">
+        <div class="inner">
+          <h2>Our Partners</h2>
+          <p>지속가능한 성장을 함께 하는 우리의 파트너들</p>
+        </div>
+        <div class="marquee_wrap">
+          <div class="marquee">
+            <div class="marquee_group">
+              <a href="#"><img src="../resources/images/main/partner-01.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-02.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-03.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-04.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-05.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-06.jpg" alt=""></a>
+            </div>
+            <div aria-hidden="true" class="marquee_group">
+              <a href="#"><img src="../resources/images/main/partner-01.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-02.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-03.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-04.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-05.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-06.jpg" alt=""></a>
+            </div>
+          </div>
+          <div class="marquee marquee_reverse">
+            <div class="marquee_group">
+              <a href="#"><img src="../resources/images/main/partner-01.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-02.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-03.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-04.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-05.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-06.jpg" alt=""></a>
+            </div>
+            <div aria-hidden="true" class="marquee_group">
+              <a href="#"><img src="../resources/images/main/partner-01.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-02.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-03.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-04.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-05.jpg" alt=""></a>
+              <a href="#"><img src="../resources/images/main/partner-06.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // section -->
+    </main>
+    <!-- // #container -->
+
+    <!-- footer -->
+    <footer>
+      <!-- f_top -->
+      <div class="f_top">
+        <div class="inner">
+          <!-- btn_srl_top -->
+          <button class="btn btn_icon btn_srl_top ani_hover">
+            <div class="ani_group">
+              <i class="ico_scrl_top ico_16"></i>
+              <i class="ico_scrl_top ico_16"></i>
+            </div>
+          </button>
+          <!-- //btn_srl_top -->
+          <!-- f_menu -->
+          <div class="f_menu">
+            <ul class="depth_1">
+              <li>
+                <a href="#">WHO WE ARE</a>
+                <ul class="depth_2">
+                  <li><a href="#">WHY WE EXIST</a></li>
+                  <li><a href="#">기업소개</a></li>
+                  <li><a href="#">연혁</a></li>
+                  <li><a href="#">사업장 소개</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">WHAT WE DO</a>
+                <ul class="depth_2">
+                  <li><a href="#">Virtual Showroom</a></li>
+                  <li><a href="#">Sustainable Technologies</a></li>
+                  <li><a href="#">Products & Services</a></li>
+                  <li><a href="#">Discover</a></li>
+                  <li><a href="#">Protect</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">IR</a>
+                <ul class="depth_2">
+                  <li><a href="#">실적발표</a></li>
+                  <li><a href="#">IR 일정</a></li>
+                  <li><a href="#">재무정보</a></li>
+                  <li><a href="#">주식정보</a></li>
+                  <li><a href="#">공시정보</a></li>
+                  <li><a href="#">전자공고</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">MEDIA</a>
+                <ul class="depth_2">
+                  <li><a href="#">뉴스룸</a></li>
+                  <li><a href="#">라이브러리</a></li>
+                  <li><a href="#">공지사항</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">ESG</a>
+                <ul class="depth_2">
+                  <li><a href="#">지속가능경영</a></li>
+                  <li><a href="#">윤리준법경영</a></li>
+                  <li><a href="#">환경안전보건경영</a></li>
+                  <li><a href="#">상생경영</a></li>
+                  <li><a href="#">사회공헌</a></li>
+                  <li><a href="#">기업지배구조</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">CAREERS</a>
+                <ul class="depth_2">
+                  <li><a href="#">인재상</a></li>
+                  <li><a href="#">채용안내</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- // f_menu -->
+          <!-- f_family -->
+          <div class="f_family">
+            <!-- select_box -->
+            <div class="select_box">
+              <div class="select_box_value"><span>관련 기관 전체보기</span></div>
+              <div class="select_box_list">
+                <ul>
+                <li><a href="#"><span>대한민국 국방부</span></a></li>
+                <li><a href="#"><span>합동참모본부</span></a></li>
+                <li><a href="#"><span>병무청</span></a></li>
+                <li><a href="#"><span>국방과학연구소</span></a></li>
+                <li><a href="#"><span>국방기술품질원</span></a></li>
+                <li><a href="#"><span>한국방위산업진흥회</span></a></li>
+                <li><a href="#"><span>한국국방연구원</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- // select_box -->
+            <!-- select_box -->
+            <div class="select_box">
+              <div class="select_box_value"><span>계열사 전체보기</span></div>
+              <div class="select_box_list list-group">
+                <ul>
+                  <li><span>한화그룹</span></li>
+                  <li class="list-group_opt">
+                    <div class="list_tit"><span>우주항공·오션·방산</span></div>
+                    <ul>
+                    <li><a href="#"><span>한화오션</span></a></li>
+                    <li><a href="#"><span>한화시스템</span></a></li>
+                    <li><a href="#"><span>한화비젼</span></a></li>
+                    <li><a href="#"><span>한화정밀기계</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="list-group_opt">
+                    <div class="list_tit"><span>에너지·소재</span></div>
+                    <ul>
+                    <li><a href="#"><span>(주)한화</span></a></li>
+                    <li><a href="#"><span>한화솔루션</span></a></li>
+                    <li><a href="#"><span>한화에너지</span></a></li>
+                    <li><a href="#"><span>한화임팩트</span></a></li>
+                    <li><a href="#"><span>한화파워시스템</span></a></li>
+                    <li><a href="#"><span>한화엔진</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- // select_box -->
+          </div>
+          <!-- // f_family -->
+        </div>
+        <!-- // inner -->
+      </div>
+      <!-- // f_top -->
+      <!-- f_btm -->
+      <div class="f_btm">
+        <div class="inner">
+          <!-- f_company -->
+          <div class="f_company">
+            <ul class="f_privacy">
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">사이트맵</a></li>
+              <li><a href="#">방문신청</a></li>
+              <li><a href="#">전자조달시스템</a></li>
+            </ul>
+            <!-- 모바일 display -->
+            <button class="select_box_value"><span>관련 기관 전체보기</span></button>
+            <!-- 모바일 display -->
+            <div class="f_copy">86, Cheonggyecheon-ro, Jung-gu, Seoul Copyright &copy;2023 Hanwha Aerospace All Rights Reserved.</div>
+          </div>
+          <!-- // f_company -->
+          <!-- f_sns -->
+          <div class="f_sns">
+            <a href="#" class="sns facebook" title="한화에어로스페이스 페이스북 이동"></a>
+            <a href="#" class="sns youtube" title="한화에어로스페이스 유튜브 이동"></a>
+          </div>
+          <!-- //f_sns -->
+        </div>
+        <!-- //inner -->
+      </div>
+      <!-- // f_btm -->
+    </footer>
+    <!-- // footer -->
+  </div>
+  <!-- // #wrap -->
+  <script src="../resources/js/mouseCursor.js"></script>
+</body>
+</html>

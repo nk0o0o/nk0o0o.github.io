@@ -1,0 +1,334 @@
+/* Button */
+button {
+   vertical-align: middle;
+   border: 0;
+   background: none;
+   white-space: nowrap;
+   outline: none;
+   cursor: pointer;
+}
+.btn {
+   display: inline-flex;
+   align-items: center;
+   overflow: visible;
+   position: relative;
+   min-height: 38px;
+   margin: 0;
+   padding: 8px 16px;
+   font-size: $fs-xs;
+   font-weight: $fw-m;
+   letter-spacing: -0.49px;
+   line-height: 1.4;
+   vertical-align: middle;
+   border: 1px solid;
+   border-color: transparent;
+   border-radius: 8px;
+   background: none;
+   white-space: nowrap;
+   outline: none;
+   cursor: pointer;
+   transition: background-color 0.3s ease-out 0s, border-color 0.3s ease-out 0s;
+   &:not(.btn_icon) {
+      i[class*="ico_"].is_left {
+         margin-right: 4px;
+      }
+      i[class*="ico_"].is_right {
+         margin-left: 4px;
+      }
+   }
+   //Size: 40px/ 48px/ 56px/ 70px -56px/
+   &_xl {
+      min-height: 70px;
+      padding: 14px 16px;
+      font-size: $fs-md;
+      line-height: 1.44;
+      letter-spacing: -0.63px;
+      box-shadow:rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+      &.btn_icon {
+         width: 70px;
+         height: 70px;
+         padding: $sp04;
+      }
+      @media screen and (max-width: $breakpoint-tablet){
+        min-height: 56px;
+        line-height: 1;
+        font-size: $fs-md;
+      }
+   }
+   &_lg {
+      min-height: 56px;
+      padding: 12px 16px;
+      font-size: $fs-md;
+      line-height: 1.5;
+      letter-spacing: -0.56px;
+      &.btn_icon {
+         width: 56px;
+         height: 56px;
+         padding: 0 $sp05;
+      }
+   }
+   &_md {
+      min-height: 48px;
+      padding: 10px 16px;
+      font-size: $fs-m;
+      line-height: 1.43;
+      letter-spacing: -0.49px;
+      &.btn_icon {
+         width: 48px;
+         height: 48px;
+         padding: 6px;
+      }
+   }
+   &_sm {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: $fs-sm;
+      line-height: 1.4;
+      letter-spacing: -0.49px;
+      &.btn_icon {
+         width: 40px;
+         height: 40px;
+         padding: $sp02;
+      }
+   }
+
+   //Color
+   &_primary {
+      color: $color-white !important;
+      border: 1px solid $color-primary;
+      background-color: $color-primary;
+      .ico_arr_right::before{
+        background-color: $color-white !important;
+      }
+      &.is_border {
+        border-color:$color-white;
+        transition: all 0.3s linear;
+      }
+   }
+   &_secondary {
+      color: $color-primary !important;
+      border: 1px solid $color-primary;
+      background-color: transparentize($color-primary, 0.9) !important;
+      &:hover {
+        border-color: $gray-600;
+        background-color: transparentize($color-primary, 0.9) !important;
+         background-color: $gray-600;
+      }
+   }
+   &_normal {
+      color: $gray-600 !important;
+      border: 1px solid $gray-50;
+      background-color: $gray-50;
+      &:hover {
+         border-color: $gray-100;
+         background-color: $gray-100;
+      }
+   }
+   &_green {
+      color: $color-white !important;
+      border: 1px solid $color-green;
+      background-color: $color-green;
+      &:hover {
+         border-color: darken($color: $color-green, $amount: 5);
+         background-color: darken($color: $color-green, $amount: 5);
+      }
+   }
+   &_white {
+      color:$color-primary !important;
+      border: 1px solid $color-white;
+      background-color: $color-white;
+      .ico_arr_right::before{
+        background-color: $color-primary !important;
+      }
+      &.is_border {
+        border: 1px solid $color-primary;
+      }
+   }
+   //disabled
+   &_disabled {
+      color: $gray-300 !important;
+      border: 1px solid $gray-50;
+      background-color: $gray-50;
+      *[class*=ico_]{
+         &::before {
+            background-color: $gray-300 !important;
+         }
+      }
+      &:hover{
+         border: 1px solid $gray-50;
+         background-color: $gray-50;
+      }
+      &.is_border {
+         border-color: $gray-100;
+         background-color: transparent;
+         &:hover {
+            border-color: $gray-100;
+            background-color: $color-white;
+         }
+      }
+   }
+   //radius
+   &_radius {
+      border-radius: 100px;
+   }
+   //아이콘만 있는 버튼
+   &.btn_icon {
+      justify-content: center;
+      border: 1px solid $gray-400;
+      &.btn_srl_down{
+        border: 1px solid $color-white;
+        i[class*="ico_"]::before{
+          background-color: $color-white;
+        }
+      }
+      i {
+         &[class*="ico_16"] {
+            margin: $sp02;
+         }
+      }
+   }   
+   //Button Group
+   &_group {
+      @include flexStart;
+      button + button {
+         margin-left: $sp03;
+      }
+   }
+   //Text Button
+   &.btn_text{
+    span{
+      display: inline-block;
+    }
+    &.btn_white{
+      background-color: transparent;
+      color: $color-white;
+      border: 0;
+      span{
+        color: $color-white;
+      }
+      .ico_arr_right{
+        border-radius: 100%;
+        background-color: $color-white;
+        &::before, &::after {
+          mask-size: 80%;
+          mask-position:center;
+          background-color: $gray-600;
+        }
+      }
+    }
+    &.txt_primary{
+      .ico_arr_right::before{
+        background-color: $color-primary;
+      }
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background-color: $color-primary;
+      transition: width 0.3s;
+    }
+    &:hover{
+      &::after{
+        width: 100%;
+      }
+    }
+   }
+   //Hover Animation
+   &.ani_hover{
+    span{
+      position: relative;
+      z-index: 1;
+    }
+    &.btn_white{
+      &:before{ 
+        background-color:$color-primary;
+        opacity: 0.1;
+      }
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0%;
+      height: 100%;
+      border-radius: 8px;
+      background-color:darken($color-primary, 10%);
+      opacity: 0.5;
+      transition: all 0.3s;
+    }
+    &:hover{     
+      &:before{
+        width: 100%;
+        left: auto;
+        right: 0;
+        transition: all 0.3s;
+      }
+    }
+   }
+}
+// 햄버거 버튼
+.btn_hamburger{
+  cursor: pointer;
+  display: flex;  
+  width: 25px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px; 
+  span{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: $gray-600;
+    transition: background-color 0.2s;
+    &:nth-child(1){
+      width: 20px;
+    }
+    &:nth-child(3){
+      width: 15px;
+    }
+  }
+  
+  &.is_closed{
+    span{
+      &:nth-last-child(2){
+        opacity: 1;
+        transition: opacity 0.1s;
+      }
+    }
+    .left{
+      top: 0px;
+      transform: rotate(0deg); 
+      transition: top 0.3s 0.3s, transform 0.3s;
+    }
+    .right{
+      top: 0px;
+      transform: rotate(0deg);
+      transition: top 0.3s 0.3s, transform 0.3s;        
+    }
+  }
+  &.is_open{
+    span{
+      &:nth-last-child(1),&:nth-last-child(3){width: 25px;}
+      &:nth-last-child(2){
+        opacity: 0;
+        transition: opacity 0.1s;
+      }
+    }
+    .left{
+      top: 10px;      
+      transform: rotate(45deg);
+      transition: top 0.3s, transform 0.3s 0.3s;    
+    }
+    .right{
+      top: -10px;      
+      transform: rotate(-45deg);
+      transition: top 0.3s, transform 0.3s 0.3s;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+/***** BREAKPOINT *****/
+//@media screen and (max-width: 768px){}
+//max-width 기준
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+/*****  FONT *****/
+// Font Family
+$font-noto: "Noto Sans KR", sans-serif;
+$font-hanwha: "Hanwha", sans-serif;
+$font-HanwhaGothic: "HanwhaGothic", sans-serif;
+
+// Font Size( 12 13 14 15 16 18 20 22 24 45 )
+$fs-xxs: 0.75rem; // 12 
+$fs-xs: 0.8125rem; // 13
+$fs-s: 0.875rem; // 14
+$fs-sm: 0.9375rem; // 15
+$fs-m: 1rem; // 16
+$fs-md: 1.125rem; // 18
+$fs-ml: 1.25rem; // 20
+$fs-l: 1.375rem; // 22
+$fs-lg: 1.5rem; // 24
+$fs-xlg: 2.8125rem; // 45
+$fs-xxlg: 3.75rem; // 60
+$fs-h2: 4.125rem; // 66
+//5.25rem -84
+// Font Weight
+$fw-t: 100; // thin // hanwhaL 
+$fw-tl: 200; // thin/light // Gipson
+$fw-l: 300; // light // HanwhaGothicEL
+$fw-n: 400; // regular // HanwhaGothicL
+$fw-m: 500; // medium // HanwhaGothicR
+$fw-sb: 600; // semibold
+$fw-b: 700; // bold // HanwhaGothicB
+$fw-bb: 900; // extrabold
+
+
+/*****  Color *****/
+// 시스템 색상
+$color-red: #D72222; 
+$color-orange: #f37321; 
+$color-yellow: #FFC107; 
+$color-olive: #B5CC18; 
+$color-green: #26A769; 
+$color-teal: #00B5AD; 
+$color-blue: #0036B1;
+$color-violet: #6435C9;
+$color-purple: #A333C8;
+$color-pink: #E03997;
+$color-brown: #A5673F;
+
+// Grayscale
+// 000000 939393 999999 666666 c0c0c0 cccccc dddddd f6f6f6 ffffff
+$gray-600: #000000;
+$gray-500: #666666;
+$gray-400: #999999;
+$gray-300: #939393;
+$gray-200: #c0c0c0;
+$gray-100: #cccccc;
+$gray-50: #dddddd;
+$gray-10: #f6f6f6;
+
+$color-white: #fff;
+$color-disabled: #F7F7F7;
+$color-box: #F7F7F7;
+$color-border:rgba($gray-600, 0.1);
+
+// 주요 색상
+$color-primary: $color-orange;
+$color-secondary: #FF0000;
+
+/***** SPACING *****/
+$sp01: 2px;
+$sp02: 4px;
+$sp03: 8px;
+$sp04: 12px;
+$sp05: 16px;
+$sp06: 24px;
+$sp07: 32px;
+$sp08: 44px;
+$sp09: 48px;
+$sp10: 64px;
+$sp11: 80px;
+$sp12: 96px;

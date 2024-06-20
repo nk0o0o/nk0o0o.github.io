@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUIDE</title>
+  <script src="../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../resources/js/common.js"></script>
+  <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<body>
+  
+  <button class="btn btn_sm btn_secondary"><span>btn_white is_border</span></button>
+
+  <a href="#" class="btn btn_sm btn_primary ani_hover">
+    <span>VIEW MORE</span>
+    <i class="ico_arr_right ico_16 is_right"></i>
+  </a>
+
+  <button class="btn btn_sm btn_white is_border"><span>btn_white is_border</span></button>
+  <button class="btn btn_sm btn_white is_border ani_hover"><span>btn_primary is_border</span></button>
+  <button class="btn btn_sm btn_primary is_border"><span>btn_primary is_border</span></button>
+  <button class="btn btn_sm btn_primary is_border ani_hover"><span>btn_primary is_border</span></button>
+  <!-- Button Size -->
+  <button class="btn btn_sm btn_primary"><span>button sm</span></button>
+  <button class="btn btn_md btn_primary"><span>button md</span></button>
+  <button class="btn btn_lg btn_primary"><span>button lg</span></button>
+  <button class="btn btn_xl btn_primary"><span>button xl</span></button>
+  <!-- //Button Size -->
+
+  <!-- 햄버거 버튼 -->
+  <div class="btn_hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- // btn_hamburger -->
+
+  <!-- btn_srl_top -->
+  <button class="btn btn_srl_top">
+    <i class="ico_scrl_top ico_20"></i>
+    <span>TOP</span>
+  </button>
+  <!-- //btn_srl_top -->
+
+  <!-- list_card -->
+  <h3>list_card col_1</h3>
+  <ul class="list_card col_1">
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+  </ul>
+  <h3>list_card col_2</h3>
+  <ul class="list_card col_2">
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+  </ul>
+  <br>
+  <h3>list_card col_3</h3>
+  <ul class="list_card col_3">
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+  </ul>
+  <br>
+  <h3>list_card col_4</h3>
+  <ul class="list_card col_4">
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+  </ul>
+  <br>
+  <h3>list_card col_5</h3>
+  <ul class="list_card col_5">
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+    <li>card content</li>
+  </ul>
+  <!-- //.list_card -->
+  <!-- badge -->
+  <span class="badge bg_green bg_gradient">세콤 연동 OPEN</span>
+  <span class="badge bg_gradient">Premium</span>
+  <span class="badge bg_primary">평생무료</span>
+  <!-- //.badge -->
+
+  <!-- marquee -->
+  <h3>marquee</h3>
+  <div class="marquee_wrap">
+    <div class="marquee">
+      <div class="marquee_group">
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+      </div>
+    </div>
+    <div class="marquee marquee_reverse">
+      <div class="marquee_group">
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+        <a href="#"><img src="../resources/images/main/visual_flower.png" alt></a>
+      </div>
+    </div>
+  </div>
+  <!-- //marquee -->
+  
+  <!-- Contain Tab -->
+  <h3>Contain Tab</h3>
+  <div class="fix_tab_wrap">
+    <!-- 탭 메뉴 -->
+    <div class="tab_menu contain_tab">
+      <ul>
+        <li class="current tab_list" data-tab="tab1"><button><span>선택된 메뉴</span></button></li>
+        <li class="tab_list" data-tab="tab2"><button><span>비활성 메뉴</span></button></li>
+        <li class="tab_list" data-tab="tab3"><button><span>비활성 메뉴</span></button></li>
+      </ul>
+      <div class="tab_bar"></div>
+    </div>
+    <!-- 탭 내용 -->
+    <div class="tab_cont">
+      <div id="tab1" class="tab_cont_item current">tab1<br>...</div>
+      <div id="tab2" class="tab_cont_item">tab2<br>...</div>
+      <div id="tab3" class="tab_cont_item">tab3<br>...</div>
+    </div>
+  </div>
+   <!-- //Contain Tab -->
+
+  <!-- Line Tab-->
+  <h3>Line Tab</h3>
+  <div class="tab_menu line_tab">
+    <ul>
+      <li class="current tab_list" data-tab="tab1"><button><span>선택된 메뉴</span></button></li>
+      <li class="tab_list" data-tab="tab2"><button><span>비활성 메뉴</span></button></li>
+      <li class="tab_list" data-tab="tab3"><button><span>비활성 메뉴 긴 텍스트</span></button></li>
+    </ul>
+    <div class="tab_bar"></div>
+  </div>
+  <div class="tab_cont">
+    <div id="tab1" class="tab_cont_item current">tab1<br>...</div>
+    <div id="tab2" class="tab_cont_item">tab2<br>...</div>
+    <div id="tab3" class="tab_cont_item">tab3<br>...</div>
+  </div>
+   <!-- //Line Tab-->
+
+  <h3>List Disc</h3>
+  <div class="list_disc">
+    <div class="list_disc_tit">평생무료</div>
+    <div class="disc">인사 DB 관리</div>
+    <div class="disc">근로관계 서식 출력</div>
+    <div class="disc">근로계약서 자동 작성</div>
+    <div class="disc">전자계약</div>
+  </div>
+  <!-- //List Disc -->
+
+
+</body>
+</html>

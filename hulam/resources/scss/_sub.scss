@@ -1,0 +1,630 @@
+/***** Page Company Intro *****/
+.p_company{
+  h2{
+    font-size: 2.25rem;
+    padding-bottom: 30px;
+    font-weight: $fw-m;
+    @media screen and (max-width: $breakpoint-tablet){
+      font-size: $fs-lg;
+    }
+  }
+  .sec{
+    &_intro{
+      padding:106px 0 50px;
+    }
+    &_history{
+      padding: 80px 0 60px;
+    }
+    &_pro{
+      padding: 90px 0;
+    }
+    @media screen and (max-width: $breakpoint-tablet){
+      &_history{
+        padding: 40px 0 120px;
+      }
+    }
+  }
+}
+//Section Intro
+.sec_intro{
+  position: relative;
+  color: $color-white;
+  p{
+    font-size: $fs-m;
+    font-weight: $fw-n;
+    line-height: 1.437;    
+    em{
+      font-weight: $fw-b;
+    }
+  }
+  .logo{
+    display: block;
+    width: 176px;
+    margin:0 auto;
+  }
+  .intro{
+    width: 80%;
+    max-width: 660px;
+    margin:0 auto 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid $color-white;
+    h2{
+      padding-bottom: 16px;
+      font-weight: $fw-b;
+    }
+    p{
+      span{
+        font-size: $fs-l;
+        line-height: 1.454
+      }
+    }
+  }
+  .list_card{
+    color: $gray-400;
+    text-align: center;
+    &.col_3{
+      margin: 44px 0 100px;
+      & > li{
+        position: relative;
+        margin-top: 50px;
+        padding: 18px;
+        background-color: $color-white;
+        border: 2px solid $color-primary;
+        & > p{
+          font-size: $fs-l;
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          top: -50px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+        }
+        &:nth-child(1){
+          &::after{
+            background: $color-primary url("../images/sub/img_company_ico_1.png") center/56px no-repeat;
+          }
+        }
+        &:nth-child(2){ 
+          &::after{
+            background: $color-primary url("../images/sub/img_company_ico_2.png") center/56px no-repeat;
+          }
+        }
+        &:nth-child(3){ 
+          &::after{
+            background: $color-primary url("../images/sub/img_company_ico_3.png") center/56px no-repeat;
+          }
+        }
+      }
+      & + p{
+        position: relative;
+        width: 100%;
+        font-size: 28px;
+        line-height: 41px;
+        color: #fff;
+        background: #407DF1;
+      }
+    }
+    &.col_1{
+      li{
+        @include flexCenter;
+        min-height: 88px;
+      }
+    }
+    p{
+      margin:52px 0 30px;
+    }
+    .box_shadow{
+      box-shadow: 8px 11px 38px rgba(0, 0, 0, 0.25);
+    }
+  }
+  &::after,&::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 70%;
+  }
+  &::before{
+    top: 0;
+    background:$color-primary url("../images/sub/img_company_intro.png") top/cover no-repeat;
+    filter: brightness(0.6);
+  }
+  &::after{
+    bottom: 0;
+    height: 450px;
+    background:$color-primary;
+  }
+  @media screen and (max-width: 1024px){
+    .list_card{
+      gap: 10px;
+    }
+  }
+  @media screen and (max-width: $breakpoint-tablet){
+    .intro{
+      width: 100%;
+    }
+    .list_card{
+      &.col_3{
+        margin-bottom: 60px;        
+        & > li{
+          min-width: 100%;
+        }
+        & + p{
+          font-size: $fs-m;
+          line-height: 1.5;
+        }
+      }
+    }
+    &::after{
+      height: 1360px;
+    }
+  }
+}
+
+//Section History
+.list_history{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 1px;
+    background-color: transparentize($color-primary, 0.7);
+  }
+  li{
+    padding: 0 0 32px 32px;
+    &:nth-child(2n + 1){
+      grid-column: 2 / 3;
+    }
+    &:nth-child(2n){
+      grid-column: 1 / 2;
+      padding: 0 32px 32px 0;
+      .his_year{
+        text-align: right;
+        &::after{
+          left: auto;
+          right: -44px;
+        }
+      }
+      p{
+        justify-content: flex-end;
+        em{
+          margin:0 0 0 4px;
+          order: 1;
+        }
+      }
+    }
+    @for $n from 1 through 7 {//연도 총 갯수
+      &:nth-child(#{$n}){
+        grid-row: #{$n} / #{$n+1};
+      }
+    }
+  }
+  .his_year{
+    position: relative;
+    margin-bottom: 18px;
+    font-weight: $fw-b;
+    font-size: 2.5rem;
+    line-height: 1.45;
+    color: $color-primary;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -44px;
+      right: auto;
+      transform: translateY(-50%);
+      height: 22px;
+      width: 22px;
+      background-color: $color-white;
+      border: 1px solid $color-primary;
+      border-radius: 100%;
+    }
+  }
+  p{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: $fs-m;
+    font-weight: $fw-n;
+    color: $gray-100;
+    em{
+      font-weight: $fw-b;
+      margin:0 4px 0 0;
+    }
+  }
+  @media screen and (max-width: $breakpoint-tablet){
+    display: block;
+    margin-top: 70px;
+    &::before{
+      left: 0;
+      height: calc(100% - 140px);
+    }
+    li{
+      padding:0 0 32px 32px !important;
+      P{
+        font-size: $fs-s;
+      }
+    }
+    .his_year{
+      text-align: left !important;
+      font-size: 1.875rem;
+      line-height: 1.93;
+      &::after{
+        left: -44px !important;
+        right: auto !important;
+      }
+    }
+    p{
+      justify-content: flex-start !important;
+      em{
+        order: 0 !important;
+        margin: 0 4px 0 0 !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-tablet){
+  .sec_history{
+    .sec_inner{
+      width: 80%;
+    }
+  }
+}
+//Section Pro
+.sec_pro{
+  background: url("../images/sub/img_company_info.png") 50%/cover no-repeat;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #363F5E;
+    opacity: 0.6;
+  }
+  h2{
+    color: $color-white;
+  }
+  .list_card{
+    li{
+      @include flexCenter;
+      width: 90%;
+      padding: 24px 56px;
+      align-self: center;
+      min-height: 82px;
+      line-height: 1.64;
+      text-align: center;
+      background-color: $color-white;
+    }
+  }
+}
+
+/***** Page Price *****/
+.p_price{
+  .sec{
+    &_price_type{
+      padding: 100px 0;
+    }
+    &_price_comparison{
+      padding: 80px 0 150px;
+    }
+    @media screen and (max-width: $breakpoint-tablet){
+      &_price_type{
+        padding: 40px 0;
+      }
+    }
+  }
+}
+//Section Price Type
+.sec_price_type{
+  background-color: $color-box;
+  h2{
+    padding-bottom: 80px;
+  }
+  .tab{
+    &_cont{
+      padding: 0;
+    }
+    &_menu{
+      button{
+        width: 137px;
+      }
+      &.contain_tab + .tab_cont{
+        margin-top: 32px;
+      }
+    }
+  }
+  .price_noti{
+    padding: 20px 30px 0 0;
+    text-align: right;
+    font-size: $fs-s;
+    font-weight: $fw-m;
+    color: $gray-50;
+  }
+  .swiper{
+    padding-bottom: 60px;
+    &-pagination{
+      bottom: 0;
+    }
+  }
+  @media screen and (max-width: 1024px){
+  }
+  @media screen and (max-width: $breakpoint-tablet){
+    h2{
+      padding-bottom: 24px;
+    }
+    .price_noti{
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+}
+.pricing_list{
+  gap: 0 !important;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  border-radius: 28px;
+  background-color: $color-white;
+  & > li{
+    min-height: 690px;
+    padding: 40px 30px;
+    background-color: transparent;
+    border-right: 2px solid $color-border;
+    border-radius: 0;
+    &:last-child{
+      border-right: 0;
+    }
+  }
+  &.col_4{
+    & > li{
+      min-width: calc(100%/4);
+    }
+  }
+  &.col_5{
+    & > li{
+      min-width: calc(100%/5);
+    }
+  }
+  .tit{
+    font-size: 1.625rem;
+    font-weight: $fw-b;
+    letter-spacing: -0.91px;
+    line-height: 1;
+  }
+  .desc{
+    min-height: 154px;
+    padding: 16px 0;
+    font-size: $fs-m;
+    color:$gray-50;
+  }
+  .btn{
+    width: 100%;
+    justify-content: center;
+  }
+  .select_box{
+    margin-bottom: 36px;
+    min-width: auto;
+    width: 100%;
+    &_value{
+      border:1px solid $color-border;
+      border-radius: 5px;
+    }
+  }
+  .price{
+    position: relative;
+    padding-top: 22px;
+    line-height: 2.125;
+    min-height: 90px;
+    font-size: $fs-m;
+    color: #999;
+    letter-spacing: -0.2px;
+    .txt_red{
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: $fs-s;
+      line-height: 1;
+    }
+    span{
+      font-size: 1.75rem;
+      line-height: 1;
+      font-weight: $fw-b;
+      font-family: "Poppins";
+      letter-spacing: -1px;
+      color: #1a1818;
+    }
+  }
+  .list_disc{
+    margin-top: 40px;
+  }
+  @media screen and (max-width: $breakpoint-desktop){
+    .price{
+      span{
+        font-size: $fs-l;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px){
+    flex-wrap: wrap;
+    margin-bottom: -2px;
+    &.col_4 > li, &.col_5 > li{
+      min-width: 50%;
+      padding: 24px;
+      flex-grow: 00;
+      border-bottom: 2px solid $color-border;
+      &:nth-child(2n+1){
+        border-right: 2px solid $color-border;
+      }
+      &:nth-child(2n){
+        border-right: 0;
+      }
+      &:nth-last-child(-n+2){
+        border-bottom: 0;
+      }
+    }
+    &.col_5 > li{
+      &:nth-child(4){
+        border: none $color-border;
+      }
+    }
+    .desc{
+      font-size: $fs-s;
+    }
+    .price{
+      font-size: $fs-s;
+      span{
+        font-size:1.625rem;
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint-tablet){
+    overflow: visible;
+    flex-wrap: nowrap;
+    background-color: transparent;
+    margin-bottom: 0;
+    &.col_4 > li, &.col_5 > li{
+      min-width: auto;
+      flex: none;
+      border: none !important;
+      border-radius: 28px;
+      background-color: $color-white;
+    }
+  }
+}
+//Section Price Comparison
+.sec_price_comparison{
+  h2{
+    margin-bottom: 10px;
+    & + p{
+      margin: 0 0 24px;
+    }
+  }
+  .tab{
+    &_menu{
+      margin: 0 0 24px;
+      display: none;
+      .tab_list{
+        margin-right: 10px;
+      }
+    }
+  }
+  .table_wrap{
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar-track {
+      border-radius: 5px;
+      background-color: #ddd;
+    }
+    &::-webkit-scrollbar {
+      opacity: 0;
+      height: 5px;
+      background-color: #ddd;
+    }
+    &::-webkit-scrollbar-thumb {
+      cursor: pointer;
+      height: 5px;
+      margin: 0 auto;
+      border-radius: 5px;
+      background-color: #343434;
+    }
+  }
+  table{
+    min-width: 880px;
+    table-layout: fixed;
+  }
+  th, td{
+    padding: 0;
+    font-size: $fs-m;
+    line-height: 1;
+  }
+  th{
+    &,& em{
+      font-weight: $fw-b;
+    }
+  }
+  th.gap, td.gap{
+    background-color: $color-white;
+    width: 1%;
+  }
+  thead{
+    th{
+      width: 15%;
+      padding: 36px 0 16px;
+      border-radius: 8px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      &:first-child{
+        width: 20%;
+        border-radius: 0;
+      }
+    }
+  }
+  thead th:first-child, tbody th{
+    background-color: $color-white;
+    text-align: left;
+    font-weight: $fw-n;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+  }
+  tbody{
+    tr{
+      &:first-child, &:nth-last-child(6){
+        border-top: 1px solid $color-border;
+        th{
+          font-size: $fs-s;
+        }
+        th, td{
+          padding:24px 0 16px;
+        }
+      }
+    }
+    th, td{
+      padding-bottom: 24px;
+    }
+    td{
+      text-align: center;
+      background-color: $color-box;
+      img{
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint-tablet){
+    .tab_menu{
+      display: block;
+    }
+  }
+}
+.warning_list{
+  padding: 82px 0 0;
+  .list_disc_tit{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: $fs-ml;
+    font-weight: $fw-b;
+  }
+  .disc{
+    color:$gray-50;
+    line-height: 1.625;
+    &::before{
+      background-color:$gray-50;
+    }
+  }
+}
